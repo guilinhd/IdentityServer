@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using IdentityServer4;
 
 namespace ClientCredentialApi
 {
@@ -25,7 +27,12 @@ namespace ClientCredentialApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication("Bearer", options => {
+                    options.ApiName = "Api";
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+                });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -44,7 +51,7 @@ namespace ClientCredentialApi
             }
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
