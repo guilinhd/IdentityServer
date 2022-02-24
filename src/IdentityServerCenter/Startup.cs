@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using IdentityServer4.Test;
 
 namespace IdentityServerCenter
 {
@@ -21,6 +21,7 @@ namespace IdentityServerCenter
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients())
                 .AddInMemoryApiScopes(Config.GetApiScopes())
+                .AddTestUsers(Config.GetTestUsers())
                 .AddDeveloperSigningCredential();
         }
 

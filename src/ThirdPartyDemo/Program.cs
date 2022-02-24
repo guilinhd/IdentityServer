@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using IdentityModel.Client;
 using System.Net.Http;
+using IdentityModel.Client;
 
 namespace ThirdPartyDemo
 {
@@ -33,7 +33,7 @@ namespace ThirdPartyDemo
                 return;
             }
 
-            //client.SetBearerToken(tokenResponse.AccessToken);
+            client.SetBearerToken(tokenResponse.AccessToken);
 
             var response = await client.GetAsync("http://localhost:5001/WeatherForecast");
             if (!response.IsSuccessStatusCode)
