@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentialApi", "Clie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThirdPartyDemo", "ThirdPartyDemo\ThirdPartyDemo.csproj", "{1130F28D-3E12-4441-AF13-35990306B9AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwdClientDemo", "PwdClientDemo\PwdClientDemo.csproj", "{47F36AC3-0546-48A2-8862-A2217EFAC7DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PwdClientDemo", "PwdClientDemo\PwdClientDemo.csproj", "{47F36AC3-0546-48A2-8862-A2217EFAC7DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OauthServerCenter", "OauthServerCenter\OauthServerCenter.csproj", "{CA4EACF5-F7E2-4922-A473-C6566B74D8DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{47F36AC3-0546-48A2-8862-A2217EFAC7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47F36AC3-0546-48A2-8862-A2217EFAC7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F36AC3-0546-48A2-8862-A2217EFAC7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4EACF5-F7E2-4922-A473-C6566B74D8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4EACF5-F7E2-4922-A473-C6566B74D8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4EACF5-F7E2-4922-A473-C6566B74D8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4EACF5-F7E2-4922-A473-C6566B74D8DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
