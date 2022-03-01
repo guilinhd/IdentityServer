@@ -20,12 +20,14 @@ namespace ClientCredentialApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication("Bearer")
-                .AddIdentityServerAuthentication("Bearer", options => {
+                .AddIdentityServerAuthentication("Bearer", options =>
+                {
                     options.ApiName = "Api";
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
-                    
+
                 });
+                
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

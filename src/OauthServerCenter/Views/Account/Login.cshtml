@@ -8,6 +8,7 @@
     <div class="col-md-12">
         <form method="post" asp-action="login" asp-controller="account">
             <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="ReturnUrl" hidden />
             <div class="form-group">
                 <label asp-for="Email"></label>
                 <input asp-for="Email" class="form-control" />

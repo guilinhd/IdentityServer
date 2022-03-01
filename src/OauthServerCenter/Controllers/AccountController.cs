@@ -19,14 +19,19 @@ namespace OauthServerCenter.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login(string returnUrl = "")
         {
+            LoginViewModel model = new LoginViewModel()
+            {
+                ReturnUrl = returnUrl
+            };
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
+
             if (ModelState.IsValid)
             {
                 var user = _users.FindByUsername(model.Email);
@@ -52,8 +57,7 @@ namespace OauthServerCenter.Controllers
                             }
                     );
 
-                return RedirectToAction("Index", "Home");
-
+                return Redirect(model.ReturnUrl);
             }
 
             return View(model);

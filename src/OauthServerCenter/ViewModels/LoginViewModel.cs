@@ -17,5 +17,7 @@ namespace OauthServerCenter.ViewModels
         [DataType(DataType.Password)]
         [Display(Name = "密码")]
         public string Password { set; get; }
+
+        public string ReturnUrl { set; get; }
     }
 }
